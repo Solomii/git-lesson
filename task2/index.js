@@ -27,6 +27,6 @@ function grid(N) {
 
 grid(4);
 grid(10);
-// grid(25);
-// grid(26);
-// grid(90);
+grid(25);
+grid(26);
+grid(90);

@@ -14,7 +14,7 @@ function dotCalculator(equation) {
   } else if (operation ==='//') {
     numberOfDotsInResult = Math.floor(firstPartNumberOfDots / secondPartNumberOfDots);
   } else {
-    throw Error("Wrong input!")
+    throw Error("Wrong input!!!")
   }
   return '.'.repeat(numberOfDotsInResult)
 }
