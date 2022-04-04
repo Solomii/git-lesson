@@ -72,3 +72,12 @@ function bind(fn, context) {
 function pluck(objects, fieldName) {
   return objects.map(el=>el[fieldName]);
 }
+
+function filter (arr, fn) {
+   let newArr = [];
+   for (let i = 0; i < input.length; i++) {
+     if(arr(isEven)) {
+     newArr - input[i];
+   }
+  return newArr;
+}
