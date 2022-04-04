@@ -53,6 +53,22 @@ function map(fn, array) {
   return newArr;
 };
 
+// 4 Напиши функцию fmap(a, gen), которая принимает на вход 2 функции,
+// a и gen, где gen — функция - генератор вроде той, что была в первом
+// задании.fmap возвращает новую функцию - генератор, которая при каждом
+// вызове берет следующее значение из gen и пропускает его через функцию a
+
+function fmap(a, gen) {
+  return function () {
+  let argsCount =arguments.length;
+  let newArr = [];
+  for (let i=0; i < argsCount; i++) {
+    newArr[i]=arguments[i];
+   }
+   return a(gen.apply(null, newArr));
+  }
+}
+
   // 5.Напиши функцию partial(fn, a1, a2, ....),
   // которая позволяет зафиксировать один или несколько аргументов функции
 
@@ -70,21 +86,7 @@ function partial(fn, ...partialArgs) {
   }
 };
 
-// 6. Напиши функцию fmap(a, gen), которая принимает на вход 2 функции,
-// a и gen, где gen — функция - генератор вроде той, что была в первом
-// задании.fmap возвращает новую функцию - генератор, которая при каждом
-// вызове берет следующее значение из gen и пропускает его через функцию a
-
-function fmap(a, gen) {
-  return function () {
-  let argsCount =arguments.length;
-  let newArr = [];
-  for (let i=0; i < argsCount; i++) {
-    newArr[i]=arguments[i];
-   }
-   return a(gen.apply(null, newArr));
-  }
-}
+// 6. 
 
 // 7. Напиши функцию bind, которая позволяет привязать
 // контекст(значение this) к функции:
