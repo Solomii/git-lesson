@@ -4,11 +4,11 @@
 //     it in persons array and logPerson function in order to fix
 //     all the TS errors.
 
-// interface User {
-//     name: string;
-//     age: number;
-//     occupation: string;
-// }
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
 
 interface Admin {
     name: string;
