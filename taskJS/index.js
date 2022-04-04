@@ -67,3 +67,8 @@ function map(fn, array) {
 function bind(fn, context) {
   return fn.bind(context);
 }
+
+// 8.Напиши функцию pluck, которая берет массив объектов и возвращает массив значений определенного поля:
+function pluck(objects, fieldName) {
+  return objects.map(el=>el[fieldName]);
+}
