@@ -68,13 +68,16 @@ function bind(fn, context) {
   return fn.bind(context);
 }
 
-// 8.Напиши функцию pluck, которая берет массив объектов и возвращает массив значений определенного поля:
+// 8.Напиши функцию pluck, которая берет массив объектов и 
+// возвращает массив значений определенного поля:
+
 function pluck(objects, fieldName) {
   return objects.map(el=>el[fieldName]);
 }
 
 // 9.Напиши функцию filter(), которая принимает функцию - предикат и массив.
 // Возвращает она массив значений, для которых предикат вернет true.
+
 function filter (arr, fn) {
   let newArr= [];
   for (let i=0; i < arr.length; i++){
@@ -83,4 +86,9 @@ function filter (arr, fn) {
   }
  }
   return newArr;
+}
+
+// 10.Напиши функцию, считающую число свойств в объекте:
+  function count (obj) {
+  return Object.keys(obj).length;
 }
