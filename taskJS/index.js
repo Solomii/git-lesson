@@ -73,11 +73,14 @@ function pluck(objects, fieldName) {
   return objects.map(el=>el[fieldName]);
 }
 
+// 9.Напиши функцию filter(), которая принимает функцию - предикат и массив.
+// Возвращает она массив значений, для которых предикат вернет true.
 function filter (arr, fn) {
-   let newArr = [];
-   for (let i = 0; i < input.length; i++) {
-     if(arr(isEven)) {
-     newArr - input[i];
-   }
+  let newArr= [];
+  for (let i=0; i < arr.length; i++){
+   if(fn(arr[i])) {
+   newArr.push(arr[i])
+  }
+ }
   return newArr;
 }
