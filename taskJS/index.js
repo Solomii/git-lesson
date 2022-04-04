@@ -14,7 +14,7 @@ function sequence(start = 0, step = 1) {
     call += step;
     return returnValue;
  }
-}
+};
 
 // 2.Также, нужна функция take(fn, count)
 // которая вызвает функцию fn заданное число(count)
@@ -29,7 +29,7 @@ function take(fn, count) {
   arr[i] = fn();
  }
  return arr;
-}
+};
 
 // 3.Напиши функцию map(fn, array),
 // которая принимает на вход функцию и массив,
@@ -51,7 +51,24 @@ function map(fn, array) {
      newArr[i] = fn(array[i]);
  }
   return newArr;
-}
+};
+
+  // 5.Напиши функцию partial(fn, a1, a2, ....),
+  // которая позволяет зафиксировать один или несколько аргументов функции
+
+function partial(fn, ...partialArgs) {
+  return function (...args) {
+    return fn.apply(this, partialArgs.concat(args));
+  }
+  
+  function add(a, b) {
+    return a + b;
+  }
+
+  function mult(a, b, c, d) {
+    return a * b * c * d;
+  }
+};
 
 // 7. Напиши функцию bind, которая позволяет привязать
 // контекст(значение this) к функции:
@@ -73,7 +90,7 @@ function bind(fn, context) {
 
 function pluck(objects, fieldName) {
   return objects.map(el=>el[fieldName]);
-}
+};
 
 // 9.Напиши функцию filter(), которая принимает функцию - предикат и массив.
 // Возвращает она массив значений, для которых предикат вернет true.
@@ -86,9 +103,9 @@ function filter (arr, fn) {
   }
  }
   return newArr;
-}
+};
 
 // 10.Напиши функцию, считающую число свойств в объекте:
   function count (obj) {
   return Object.keys(obj).length;
-}
+};
